@@ -13,14 +13,12 @@ angular.module('debugblogApp')
 
     _this.bugs = bugs.data;
     _this.newBug = {
-      bugId: null,
       description: null
     };
 
     _this.addBug = function(){
-        BugService.addBug( _this.newBug.bugId, _this.newBug.description)
+        BugService.addBug(_this.newBug.description)
           .then(function(response){
-            _this.newBug.bugId = null;
             _this.newBug.description = null;
             _this.bugs.push(response.data);
           })

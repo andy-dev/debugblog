@@ -22,16 +22,18 @@ angular.module('debugblogApp')
 
     /**
      * Add a task.
-     * @param {string} bugId
      * @param {string} description
      */
-     service.addBug = function(bugId,description) {
+     service.addBug = function(description) {
       return $http.post(API_URL.concat('/api/Bugs'), {
-        bugId: bugId,
         description: description,
         isResolved: false
       });
     };
+
+    service.updateBug = function(bug){
+      return $http.put(API_URL.concat('/api/Bugs').concat(bug.id), bug);
+    }
 
     return service;
   });

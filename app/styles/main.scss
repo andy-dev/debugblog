@@ -14,9 +14,38 @@ body {
   padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
+.av-bug-container {
+  margin: 1em 0;
+  border: 1px solid $gray-light;
+  padding: 1em;
+
+  .av-bugs {
+    margin-bottom: 2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    av-bug {
+      border-radius: 2px;
+      border: 1px solid #ccc;
+      display: block;
+      padding: .25em .5em;
+      margin-bottom: .5em;
+
+      em {
+        color: #aaa;
+        margin-left: 1em;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
 .footer {
   margin-top:15px;
   padding-left: 15px;

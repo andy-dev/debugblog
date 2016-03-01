@@ -2,13 +2,8 @@
  <div class="col-sm-12">
   <form class="form-inline">
     <div class="form-group">
-      <label>BugId</label>
-      <div class="input-group">
-      <input type="text" class="form-control" placeholder="bug id" ng-model="homeCtrl.newBug.bugId">
-    </div>
-    <div class="form-group">
       <label>Description</label>
-      <input type="text" class="form-control" placeholder="bug id" ng-model="homeCtrl.newBug.description">
+      <input type="text" class="form-control" placeholder="bug description" ng-model="homeCtrl.newBug.description">
     </div>
     <button class="btn btn-primary" type="submit" ng-click="homeCtrl.addBug()">Add Bug</button>
   </form>
@@ -23,7 +18,13 @@
         <h4>Open Bugs</h4>
 
         <!-- Repeat Bugs -->
-        <av-bug bug="bug" ng-repeat="bug in homeCtrl.bugs"></av-bug>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">Bug Description</a></div>
+            <div class="col-md-3">Resolved?</a></div>
+            <div class="col-md-3">Actions</div>
+          </div>
+          <av-bug bug="bug" ng-repeat="bug in homeCtrl.bugs"></av-bug>
 
         <!-- No Tasks Message -->
         <div>
@@ -36,3 +37,5 @@
     </div>
   </div>
 </div>
+
+
