@@ -23,5 +23,7 @@
             _this.bug = response.data;
           })
       }
-    })
+    });
+
+
   })

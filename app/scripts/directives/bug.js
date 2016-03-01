@@ -24,6 +24,15 @@
           BugService.updateBug(_this.bug);
         };
 
+        _this.deleteBug = function(){
+          if($window.confirm("Delete the Bug?!")){
+            return BugService.deleteBug(_this.bug.id)
+              .then(function(){
+                $scope.$emit('bug.deleted', _this.bug);
+              });
+          }
+        }
+
 
       }
     }

@@ -17,10 +17,15 @@ angular.module('debugblogApp')
     };
 
     _this.addBug = function(){
-        BugService.addBug(_this.newBug.description)
-          .then(function(response){
-            _this.newBug.description = null;
-            _this.bugs.push(response.data);
-          })
-    }
+      BugService.addBug(_this.newBug.description)
+        .then(function(response){
+          _this.newBug.description = null;
+          _this.bugs.push(response.data);
+        })
+    };
+
+    $scope.$on('bug.deleted', function(event,bug){
+      _.pull(_this.bugs, bug);
+    });
+
   });

@@ -20,10 +20,6 @@ angular.module('debugblogApp')
       return $http.get(API_URL.concat('/api/Bugs'));
     };
 
-    /**
-     * Add a task.
-     * @param {string} description
-     */
      service.addBug = function(description) {
       return $http.post(API_URL.concat('/api/Bugs'), {
         description: description,
@@ -33,6 +29,10 @@ angular.module('debugblogApp')
 
     service.updateBug = function(bug){
       return $http.put(API_URL.concat('/api/Bugs').concat(bug.id), bug);
+    }
+
+    service.deleteBug = function(bugId){
+      return $http.delete(API_URL.concat('/api/Bugs/').concat(bugId));
     }
 
     return service;

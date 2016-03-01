@@ -8,6 +8,6 @@
   <div class="col-md-4"><a ui-sref="#">{{bugCtrl.bug.description}}</a></div>
   <div class="col-md-3">{{bugCtrl.bug.isResolved}}</div>
   <div class="col-md-3">
-    <button type="button" class="btn btn-danger btn-xs">Delete</button>
+    <button type="button" class="btn btn-danger btn-xs" ng-click="bugCtrl.deleteBug()">Delete</button>
   </div>
 </div>
