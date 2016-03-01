@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 /**
  * @ngdoc function
@@ -7,11 +7,12 @@
  * # MainCtrl
  * Controller of the debugblogApp
  */
-angular.module('debugblogApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+
+// angular.module('debugblogApp')
+//   .controller('MainCtrl', function () {
+//     this.awesomeThings = [
+//       'HTML5 Boilerplate',
+//       'AngularJS',
+//       'Karma'
+//     ];
+//   });
