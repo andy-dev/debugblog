@@ -6,21 +6,21 @@
  * @description
  * # debugblogApp
  *
- * Main module of the application.
+ * Main module of app
  */
+
 angular
   .module('debugblogApp', [
     'ngAnimate',
-    'ui.router', // UI Router
-    'ui.bootstrap', // Angular Bootstrap
-    'restangular', // Restangular
-    'ngStorage' // ngStorage for local storage
+    'ui.router',
+    'ui.bootstrap',
+    'restangular',
+    'ngStorage'
   ])
-
   .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/'); // For any unmatched url
+    $urlRouterProvider.otherwise('/');
 
-     $stateProvider
+    $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'views/home.html',

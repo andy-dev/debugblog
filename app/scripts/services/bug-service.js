@@ -30,7 +30,7 @@ angular.module('debugblogApp')
         bugId: bugId,
         description: description,
         isResolved: false
-      }); // Add a new task to the array in local storage
+      });
     };
 
     return service;

@@ -1,21 +1,39 @@
-
-<div class="row">
-  <div class="col-sm-12">
-    <h1>My Bugs</h1>
-
-    <!-- New Task Input -->
-    <form>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="bug id" ng-model="homeCtrl.newBug.bugId">
-        <input type="text" class="form-control" placeholder="bug id" ng-model="homeCtrl.newBug.description">
-
-
-
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="submit" ng-click="homeCtrl.addBug()">Add Task</button>
-      </span>
-      </div>
-    </form>
+<form class="form-inline">
+  <div class="form-group">
+    <label>BugId</label>
+    <div class="input-group">
+    <input type="text" class="form-control" placeholder="bug id" ng-model="homeCtrl.newBug.bugId">
   </div>
-</div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="bug id" ng-model="homeCtrl.newBug.description">
+  </div>
+  <button class="btn btn-primary" type="submit" ng-click="homeCtrl.addBug()">Add Bug</button>
+</form>
 
+
+<!--
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <div class="col-sm-10">
+      <h4>Bug</h4>
+      <input type="text" class="form-control" ng-model="homeCtrl.newBug.bugId" placeholder="BugID">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-10">
+      <h4>Description</h4>
+      <input type="text" class="form-control" ng-model="homeCtrl.newBug.description" placeholder="Description">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-6 col-sm-10">
+      <button type="submit" class="btn btn-info">Update</button>
+      <button type="submit" class="btn btn-success" ng-click="homeCtrl.addBug()">Add</button>
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</form> -->
