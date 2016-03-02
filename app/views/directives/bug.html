@@ -5,7 +5,7 @@
   <div class="col-md-4"><a ui-sref="#">{{bugCtrl.bug.description}}</a></div>
   <div class="col-md-1">{{bugCtrl.bug.isResolved}}</div>
   <div class="col-md-6 text-right">
-    <button type="button" class="btn btn-success btn-xs" ng-click="bugCtrl.bug.isResolved = true" ng-disabled="bugCtrl.bug.isCompleted">Mark Resolved
+    <button type="button" class="btn btn-success btn-xs" ng-click="bugCtrl.bug.isResolved = true" ng-disabled="bugCtrl.bug.isResolved">Mark Resolved
     </button>
     <button type="button" class="btn btn-primary btn-xs" ng-click="bugCtrl.bug.isResolved = false" ng-disabled="!bugCtrl.bug.isResolved">Mark Open
     </button>
