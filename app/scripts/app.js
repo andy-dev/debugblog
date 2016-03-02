@@ -1,26 +1,19 @@
-'use strict';
+(function(){
+  'use strict';
 
-/**
- * @ngdoc overview
- * @name debugblogApp
- * @description
- * # debugblogApp
- *
- * Main module of the application.
- */
-angular
-  .module('debugblogApp', [
-    'ngAnimate',
-    'ui.router',
-    'ui.bootstrap',
-    'restangular',
-    'ngStorage'
-  ])
+  angular
+    .module('debugblogApp', [
+      'ui.router',
+      'ui.bootstrap'
+    ])
+    .config(configFunction);
 
-  .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    configFunction.$inject = ['$urlRouterProvider','$stateProvider'];
 
-    $stateProvider
+    function configFunction($urlRouterProvider, $stateProvider){
+      $urlRouterProvider.otherwise('/');
+
+      $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'views/home.html',
@@ -43,4 +36,5 @@ angular
           }
         }
       });
-  });
+     }
+})();
