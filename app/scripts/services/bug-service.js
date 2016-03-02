@@ -7,15 +7,12 @@
  * # BugService
  * Service in the debugBlog.
  */
-angular.module('debugblogApp')
+angular
+  .module('debugblogApp')
   .service('BugService', function($http){
     var service = {};
     var API_URL = 'http://localhost:3000';
 
-    /**
-     * Find all bugs.
-     * @returns {Object}
-     */
     service.findAllBugs = function() {
       return $http.get(API_URL.concat('/api/Bugs'));
     };
@@ -28,7 +25,7 @@ angular.module('debugblogApp')
     };
 
     service.updateBug = function(bug){
-      return $http.put(API_URL.concat('/api/Bugs').concat(bug.id), bug);
+      return $http.put(API_URL.concat('/api/Bugs/').concat(bug.id), bug);
     }
 
     service.deleteBug = function(bugId){

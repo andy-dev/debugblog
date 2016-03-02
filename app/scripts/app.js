@@ -6,9 +6,8 @@
  * @description
  * # debugblogApp
  *
- * Main module of app
+ * Main module of the application.
  */
-
 angular
   .module('debugblogApp', [
     'ngAnimate',
@@ -17,6 +16,7 @@ angular
     'restangular',
     'ngStorage'
   ])
+
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
