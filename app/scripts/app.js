@@ -31,5 +31,16 @@ angular
             return BugService.findAllBugs();
           }
         }
+      })
+      .state('details', {
+        url: '/details/:bugId',
+        templateUrl: 'views/details.html',
+        controller: 'DetailsCtrl',
+        controllerAs: 'detailsCtrl',
+        resolve: {
+          bug: function($stateParams, BugService){
+            return BugService.findBug($stateParams.bugId);
+          }
+        }
       });
   });

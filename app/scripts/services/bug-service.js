@@ -15,6 +15,10 @@
         return $http.get(API_URL.concat('/api/Bugs'));
       };
 
+      service.findBug = function(bugId){
+        return $http.get(API_URL.concat('/api/Bugs/').concat(bugId));
+      }
+
       service.addBug = function(description){
         return $http.post(API_URL.concat('/api/Bugs'), {
           description: description,

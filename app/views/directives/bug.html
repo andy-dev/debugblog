@@ -2,7 +2,7 @@
   <div class="col-md-1">
     <input type = "checkbox" ng-model = "bugCtrl.bug.isResolved" ng-change = "bugCtrl.updateBug()"></input>
   </div>
-  <div class="col-md-4"><a ui-sref="#">{{bugCtrl.bug.description}}</a></div>
+  <div class="col-md-4"><a ui-sref="details({bugId : bugCtrl.bug.id})">{{bugCtrl.bug.description}}</a></div>
   <div class="col-md-1">{{bugCtrl.bug.isResolved}}</div>
   <div class="col-md-6 text-right">
     <button type="button" class="btn btn-success btn-xs" ng-click="bugCtrl.bug.isResolved = true" ng-disabled="bugCtrl.bug.isResolved">Mark Resolved
