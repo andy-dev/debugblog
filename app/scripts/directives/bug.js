@@ -16,7 +16,7 @@
         bug: '='
       }
     };
-  }
+  };
 
   BugFormController.$inject = ['$window', '$scope', 'BugService'];
 
