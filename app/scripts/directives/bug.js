@@ -6,16 +6,17 @@
     .directive('avBug', avBug);
 
   function avBug() {
-    return {
-      templateUrl: 'views/directives/bug.html',
-      restrict: 'E',
-      controller: BugFormController,
-      controllerAs: 'bugCtrl',
-      bindToController: true,
-      scope: {
-        bug: '='
-      }
-    };
+    var directive = {
+        restrict: 'E',
+        templateUrl: 'views/directives/bug.html',
+        controller: BugFormController,
+        controllerAs: 'bugCtrl',
+        bindToController: true,
+        scope: {
+         bug: '='
+        }
+      };
+    return directive;
   };
 
   BugFormController.$inject = ['$window', '$scope', 'BugService'];
