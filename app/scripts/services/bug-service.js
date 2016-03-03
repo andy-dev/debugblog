@@ -11,11 +11,11 @@
       var API_URL = 'http://localhost:3000';
 
       var service = {
-        findAllBugs: findAllBugs,
-        findBug: findBug,
-        addBug: addBug,
-        updateBug: updateBug,
-        deleteBug: deleteBug
+        findAllBugs :  findAllBugs,
+        findBug     :  findBug,
+        addBug      :  addBug,
+        updateBug   :  updateBug,
+        deleteBug   :  deleteBug
       };
 
       return service;

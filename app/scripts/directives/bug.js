@@ -9,13 +9,13 @@
     var directive = {
         restrict: 'E',
         templateUrl: 'views/directives/bug.html',
+        scope: {
+          bug: '='
+        },
         controller: BugFormController,
         controllerAs: 'bugCtrl',
-        bindToController: true,
-        scope: {
-         bug: '='
-        }
-      };
+        bindToController: true
+    };
     return directive;
   };
 
@@ -36,7 +36,6 @@
           });
       }
     };
-
   };
 
 })();
