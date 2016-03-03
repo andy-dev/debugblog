@@ -41,3 +41,18 @@
 })();
 
 
+// function BugFormController($window, $scope, BugService) {
+
+//     $scope.updateBug = function(bug){
+//       BugService.updateBug(bug);
+//     };
+
+//     $scope.deleteBug = function(bug){
+//       if($window.confirm("Delete the Bug?!")){
+//         return BugService.deleteBug(bug.id)
+//           .then(function(){
+//             $scope.$emit('bug.deleted', bug);
+//           });
+//       }
+//     };
+//   };

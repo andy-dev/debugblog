@@ -3,38 +3,44 @@
 
   angular
     .module('debugblogApp')
-    .service('BugService', BugService)
+    .factory('BugService', BugService);
 
     BugService.$inject = ['$http'];
 
     function BugService ($http){
-      var service = {};
       var API_URL = 'http://localhost:3000';
 
-      service.findAllBugs = function() {
+      var service = {
+        findAllBugs: findAllBugs,
+        findBug: findBug,
+        addBug: addBug,
+        updateBug: updateBug,
+        deleteBug: deleteBug
+      };
+
+      return service;
+
+      function findAllBugs() {
         return $http.get(API_URL.concat('/api/Bugs'));
       };
 
-      service.findBug = function(bugId){
+      function findBug(bugId){
         return $http.get(API_URL.concat('/api/Bugs/').concat(bugId));
-      }
+      };
 
-      service.addBug = function(description){
+      function addBug(description){
         return $http.post(API_URL.concat('/api/Bugs'), {
           description: description,
           isResolved: false
         });
       };
 
-      service.updateBug = function(bug){
+      function updateBug(bug){
         return $http.put(API_URL.concat('/api/Bugs/').concat(bug.id), bug);
       };
 
-      service.deleteBug = function(bugId){
+      function deleteBug(bugId){
         return $http.delete(API_URL.concat('/api/Bugs/').concat(bugId));
       };
-
-      return service;
     };
-
 })();
